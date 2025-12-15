@@ -73,8 +73,6 @@ module org.spongepowered.mixin {
     exports org.spongepowered.asm.launch;
     exports org.spongepowered.asm.launch.platform;
     exports org.spongepowered.asm.launch.platform.container;
-    exports org.spongepowered.asm.lib;
-    exports org.spongepowered.asm.lib.tree;
     exports org.spongepowered.asm.logging;
     exports org.spongepowered.asm.mixin;
     exports org.spongepowered.asm.mixin.connect;

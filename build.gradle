@@ -78,12 +78,7 @@ repositories {
 }
 
 sourceSets {
-    legacy {
-        ext.languageVersion = 8
-        ext.compatibility = '1.8'
-    }
     main {
-        compileClasspath += legacy.output
         ext.languageVersion = 8
         ext.compatibility = '1.8'
     }
@@ -233,14 +228,11 @@ dependencies {
     bridgeImplementation 'org.apache.logging.log4j:log4j-core:2.0-beta9'
     bridgeImplementation "org.ow2.asm:asm-commons:$legacyForgeAsmVersion"
     
-    legacyImplementation "org.ow2.asm:asm-tree:$asmVersion"
-    
     modularityCompileOnly 'org.apache.logging.log4j:log4j-core:2.11.2'
 }
 
 javadoc {
     exclude '**/throwables'
-    classpath += sourceSets.legacy.output
     source sourceSets.ap.allJava
     options.encoding = 'UTF-8'
     exclude {
